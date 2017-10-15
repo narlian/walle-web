@@ -1,0 +1,14 @@
+walle_web:
+  build: .
+  ports:
+    - 8001:80
+  environment:
+    - "WALLE_DB_DSN=mysql:host=192.168.2.21;port=9696;dbname=walle"
+    - "WALLE_DB_USER=hluser"
+    - "WALLE_DB_PASS=hl123456"
+    - "WALLE_MAIL_USER=519830419@qq.com"
+    - "WALLE_MAIL_PASS=whpjotvvtiocbgdg"
+    - "WALLE_MAIL_PORT=465"
+  restart: always
+  stdin_open: true
+  tty: true
