@@ -1,5 +1,8 @@
 FROM php:apache
 
+RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak
+COPY ./sources.list /etc/apt/sources.list
+
 RUN apt-get update && apt-get install -y gettext-base libmcrypt-dev libicu-dev \
       zlib1g-dev unzip git subversion ssh ansible && rm -rf /var/lib/apt/lists/*
 
