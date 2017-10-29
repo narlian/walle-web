@@ -1,4 +1,4 @@
-FROM php:apache
+FROM registry.docker-cn.com/library/php:apache
 
 RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak
 COPY ./sources.list /etc/apt/sources.list
